@@ -58,4 +58,55 @@ def het():
         for i in range(0, szorzat+1,1):
             print(i, end=" ")
 def kilenc():
-    pass
+    for i in range(1, 8):  # 1-től 7-ig
+        if i < 7:
+            print(i, end=", ")
+        else:
+            print(i)
+def faktorialis(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+def tizes():
+    szam = beolvas()
+    eredmeny = faktorialis(szam)
+    print(f"A {szam} faktoriálisa: {eredmeny}")
+
+
+def beolvas():
+    szam = int(input("Kérem adjon meg egy egész számot: "))
+    return szam
+
+
+def tizenegy():
+    x = beolvas()
+    y = beolvas()
+
+    eredmeny = 3 * x + (y ** 2)  # Kiszámítja a kifejezést
+    print(f"3 * {x} + {y}^2 = {eredmeny}")
+
+
+def beolvas():
+    szam = int(input("Kérem adjon meg egy egész számot: "))
+    return szam
+
+
+def tizenkettő():
+    szam1 = beolvas()
+    szam2 = beolvas()
+
+    # A legkisebb és legnagyobb szám meghatározása
+    also = min(szam1, szam2)
+    felso = max(szam1, szam2)
+
+    paros_db = 0
+    for i in range(also, felso + 1):
+        if i % 2 == 0:  # Ellenőrizzük, hogy páros szám-e
+            paros_db += 1
+
+    print(f"A {also} és {felso} közötti páros számok száma: {paros_db}")
